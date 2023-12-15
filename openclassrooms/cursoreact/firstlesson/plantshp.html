@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jungle House</title>
+  </head>
+  <body>
+    <header>
+      <div id="root"></div>
+    </header>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      // function MyComponent() {
+      //   return <div>Hello OpenClassrooms 👋</div>;
+      // }
+      // ReactDOM.render(
+      //   <MyComponent />,
+      //   document.getElementById("react-goes-here"),
+      // );
+      function Description() {
+        const text = "The place to buy all the plants you've ever wanted";
+        const emojis = "🤑🤑🤑";
+        return <p>{text.slice(1, 11) + emojis}</p>;
+      }
+      function Header() {
+        return (
+          <div>
+            <h1>Jungle House</h1>
+          </div>
+        );
+      }
+      function Banner() {
+        return (
+          <div>
+            <Header />
+            <Description />
+          </div>
+        );
+      }
+      //   ReactDOM.render(
+      //     <div>
+      //       <Header /> <Description />
+      //     </div>,
+      //     document.getElementById("root"),
+      //   );
+      ReactDOM.render(
+        <React.Fragment>
+          <Header />
+          <Description />
+        </React.Fragment>,
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>

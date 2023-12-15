@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jungle House</title>
+  </head>
+  <body>
+    <header>
+      <div id="root"></div>
+    </header>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function Header() {
+        let name = "Jungle House";
+        return (
+          <div>
+            <h1>{name.toUpperCase()}</h1>
+          </div>
+        );
+      }
+      function Cart() {
+        let p1 = 8;
+        let p2 = 10;
+        let p3 = 15;
+
+        return (
+          <div>
+            <h2>Cart</h2>
+            <ul>
+              <li>monstera: ${p1}</li>
+              <li>ivy: ${p2}</li>
+              <li>bunch: ${p3}</li>
+            </ul>
+            Total: ${p1 + p2 + p3}
+          </div>
+        );
+      }
+      function Banner() {
+        return (
+          <div>
+            <Header />
+            <Cart />
+          </div>
+        );
+      }
+      ReactDOM.render(
+        <div>
+          <Banner />
+        </div>,
+        document.getElementById("root"),
+      );
+    </script>
+  </body>
+</html>
